@@ -1,0 +1,30 @@
+{
+  "name": "mcp-custom-kf-server",
+  "version": "1.0.2",
+  "main": "./build/index.js",
+  "bin": {
+    "mcp-custom-kf-server": "build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node ./src/index.js",
+    "build": "node --eval \"import('fs').then(fs => fs.chmodSync('build/index.js', '755'))\"",
+    "prepare": "npm run build"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tatn/mcp-server-fetch-typescript.git"
+  },
+  "author": "whyshop",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "zod": "^3.24.2"
+  },
+  "type": "module"
+}
